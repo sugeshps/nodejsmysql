@@ -24,7 +24,7 @@ module.exports = {
         );
     },
     getProducts :  callBack=>{
-        pool.query(`select * from rtbl_tblitemmaster `,[],
+        pool.query(`select * from products `,[],
         (error,results,fields)=>{
             if(error){
                  return  callBack(error);
