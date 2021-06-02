@@ -6,6 +6,9 @@ const productRouter = require("./api/products/product.router");
 const userRouter = require("./api/user/user.router");
 const sendMailRouter = require("./api/sendmail/sendmail.router");
 const formvalidateRouter = require("./api/formvalidate/formvalidate.router");
+const filemanageRouter = require("./api/filemanage/filemanage.router");
+
+
 //const imageUpload = require("./api/imageupload/imageupload.router");
 
 app.use(express.json());
@@ -13,6 +16,7 @@ app.use("/api/products",productRouter);
 app.use("/api/validate",formvalidateRouter);
 app.use("/api/users",userRouter);
 app.use("/api/sendmail",sendMailRouter);
+app.use("/api/filesmanage",filemanageRouter);
 //app.use("/api/imageupload",imageUpload);
 app.use(express.static("webapproot"));
 app.use(fileupload());
